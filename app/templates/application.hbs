@@ -1,3 +1,10 @@
-<h2 id="title">Welcome to Ember</h2>
+<h2 id="title">Welcome to Ember Example Application</h2>
+
+<label labelFor="hotel-input">Hotel ID</label> 
+{{input name="hotel-input" type="text" value=hotelId required="true"}}
+<label labelFor="room-input">Room Token</label> 
+{{input name="room-input" type="text" value=roomToken required="true"}}
+
+{{#link-to 'hotel.room' hotelId roomToken}} <button>Show Hotel Room</button> {{/link-to}}
 
 {{outlet}}
