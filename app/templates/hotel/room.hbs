@@ -1,0 +1,18 @@
+
+<p>Name: {{model.name}}</p>
+<p>Meal Plan: {{model.mealPlan}}</p>
+<p>Category: {{model.category}}</p>
+<p>Available Quantity: {{model.quantityAvailable}}</p>
+
+{{#if model.isAvailable}}
+	<p><strong>This Room is available</strong></p>
+{{else}}
+	<p><strong>This room is NOT available</strong></p>
+{{/if}}
+
+<h3> Rates </h3>
+{{#each model.rates as |rate index|}}
+	<h4>#{{plusone index}} Cotation</h4>
+	<p>Price with Tax: {{rate.priceWithTax}}</p>
+	<p>Price without Tax: {{rate.priceWithoutTax}}</p>
+{{/each}}
